@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Account | MilkyWay Farms</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/main.js" defer></script>
+  <script src="/js/auth.js" defer></script>
+</head>
+<body class="owner-page">
+  <header class="site-header">
+    <a href="/" class="brand"><img src="/images/logo.jpeg" alt="MilkyWay Farms" class="site-logo"><div class="brand-text"><strong>MilkyWay Farms</strong><small>FRESHNESS, EVERY DAY</small></div></a>
+    <nav class="site-nav"><a href="/pages/products.html">Products</a><a href="/pages/subscription.html">Subscriptions</a><a href="/pages/checkout.html">Cart</a><button id="customer-header-logout" class="button button-sm" type="button">Sign out</button></nav>
+  </header>
+
+  <main class="account-page">
+    <section class="account-hero">
+      <div class="account-avatar" id="account-avatar">M</div>
+      <div><p class="eyebrow">MilkyWay member</p><h1 id="account-name">Hello</h1><p id="account-detail"></p></div>
+      <div class="account-hero-actions"><a class="button button-sm" href="/pages/products.html">Shop products</a><a class="button button-sm button-secondary" href="/pages/subscription.html">Start a plan</a></div>
+    </section>
+
+    <section class="account-stats" aria-label="Account summary">
+      <div><span id="order-total">0</span><small>Order requests</small></div>
+      <div><span id="plan-total">0</span><small>Milk plans</small></div>
+      <div><span>24/7</span><small>WhatsApp support</small></div>
+    </section>
+
+    <div class="account-grid">
+      <section class="account-panel account-tracker-panel">
+        <div class="account-panel-heading"><div><p class="eyebrow">Live plan tracker</p><h2>Your delivery plan</h2></div><span class="tracker-live-dot">Active</span></div>
+        <div id="plan-tracker"><p class="account-empty">Create a milk plan to see its delivery tracker here.</p></div>
+      </section>
+
+      <section class="account-panel">
+        <div class="account-panel-heading"><div><p class="eyebrow">Quick tracking</p><h2>Find an order</h2></div></div>
+        <form id="account-order-tracker" class="account-tracker-form"><label for="account-tracker-input">Order tracking ID</label><div><input id="account-tracker-input" placeholder="e.g. MW123456"><button class="button button-sm" type="submit">Track</button></div></form>
+        <div id="account-tracker-result" aria-live="polite"></div>
+      </section>
+    </div>
+
+    <section class="account-panel account-history-panel">
+      <div class="account-panel-heading"><div><p class="eyebrow">Order history</p><h2>Your recent requests</h2></div><a href="/pages/products.html" class="text-button">Order again</a></div>
+      <div id="customer-orders-container"></div>
+    </section>
+
+    <section class="account-panel account-history-panel">
+      <div class="account-panel-heading"><div><p class="eyebrow">Subscription history</p><h2>Your milk plans</h2></div></div>
+      <div id="customer-subs-container"></div>
+    </section>
+  </main>
+</body>
+</html>

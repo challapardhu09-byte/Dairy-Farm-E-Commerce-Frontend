@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign in | MilkyWay Farms</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/auth.js" defer></script>
+</head>
+<body class="owner-page">
+  <main class="owner-login-wrap customer-access-wrap">
+    <section class="owner-login-card auth-card customer-access-card" aria-labelledby="auth-title">
+      <a class="back-link" href="/">← Back to MilkyWay Farms</a>
+      <div class="customer-access-brand"><img src="/images/logo.jpeg" alt="MilkyWay Farms logo"><div><strong>MilkyWay Farms</strong><small>FRESHNESS, EVERY DAY</small></div></div>
+      <p class="eyebrow" style="color:var(--leaf);margin:0;">Customer portal</p>
+      <h1 id="auth-title">Welcome back</h1>
+      <p id="auth-subtitle" class="customer-access-subtitle">Use your mobile number to continue securely.</p>
+      <div class="auth-mode-tabs" role="tablist" aria-label="Account access">
+        <button type="button" class="auth-mode-tab active" data-mode="signin" role="tab" aria-selected="true">Sign in</button>
+        <button type="button" class="auth-mode-tab" data-mode="create" role="tab" aria-selected="false">Create account</button>
+      </div>
+      <form id="customer-login-form" novalidate>
+        <div id="name-field" hidden><label for="customer-name-input">Full name</label><input id="customer-name-input" autocomplete="name" placeholder="e.g. Priya Reddy"></div>
+        <label for="mobile-number-input">Mobile number</label>
+        <div class="phone-input-wrap"><span class="phone-prefix">+91</span><input id="mobile-number-input" type="tel" inputmode="numeric" maxlength="10" autocomplete="tel-national" placeholder="10-digit mobile number" required></div>
+        <button id="send-otp-button" type="submit" class="button customer-access-button">Send OTP</button>
+        <p id="login-message" class="form-message" aria-live="polite"></p>
+      </form>
+      <form id="otp-verification-form" hidden novalidate>
+        <div class="otp-step-header"><span class="otp-step-icon">✓</span><div><strong>Verify your number</strong><small id="otp-target-mobile"></small></div></div>
+        <label for="otp-code-input">Enter the 6-digit OTP</label>
+        <input id="otp-code-input" class="otp-input-field" type="text" inputmode="numeric" maxlength="6" autocomplete="one-time-code" placeholder="• • • • • •" required>
+        <div id="demo-otp-note" class="demo-otp-note" hidden></div>
+        <button type="submit" class="button customer-access-button">Verify &amp; go to Home</button>
+        <button id="change-mobile-button" type="button" class="text-button customer-change-button">Use a different number</button>
+        <p id="otp-message" class="form-message" aria-live="polite"></p>
+      </form>
+      <p class="customer-access-footnote">No password required · Details are stored only on this device.</p>
+    </section>
+  </main>
+</body>
+</html>

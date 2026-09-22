@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MilkyWay Farms — 100% pure, farm-fresh milk, bilona ghee, paneer, and natural dairy delivered to your doorstep daily before 7:00 AM.">
+  <title>MilkyWay Farms | Pure Dairy, Delivered Fresh Daily</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/main.js" defer></script>
+</head>
+<body>
+
+  <!-- ================= OPENING ANIMATION ================= -->
+  <div id="page-loader" title="Click to skip">
+    <div class="milk-animation">
+      <div class="milk-packet">
+        <div class="packet-top"></div>
+        <div class="packet-label">
+          <span>🥛</span>
+          <strong>MILKYWAY<br>FARMS</strong>
+          <small>PURE MILK</small>
+        </div>
+      </div>
+      <div class="milk-stream"></div>
+      <div class="milk-glass">
+        <div class="glass-milk"></div>
+      </div>
+    </div>
+
+    <div class="loader-brand">
+      <img src="/images/logo.jpeg" alt="MilkyWay Farms Logo">
+      <h2>MilkyWay Farms</h2>
+      <p>FRESHNESS, EVERY MORNING</p>
+    </div>
+  </div>
+
+  <!-- ================= SITE HEADER ================= -->
+  <!-- ================= SITE HEADER ================= -->
+  <header class="site-header">
+    <a href="/" class="brand" aria-label="MilkyWay Farms Homepage">
+      <img src="/images/logo.jpeg" alt="MilkyWay Farms Logo" class="site-logo">
+      <div class="brand-text">
+        <strong>MilkyWay Farms</strong>
+        <small>FRESHNESS, EVERY DAY</small>
+      </div>
+    </a>
+
+    <button class="mobile-nav-toggle" aria-label="Toggle navigation menu">☰</button>
+
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="/" class="active">Home</a>
+      <a href="/pages/products.html" class="">Shop Dairy</a>
+      <a href="/pages/subscription.html" class="">Milk Subscription</a>
+      <a href="/pages/about.html" class="">About Us</a>
+      <a href="/pages/contact.html" class="">Contact Us</a>
+    </nav>
+
+    <!-- Header Action Icons (Profile & Cart) -->
+    <div class="header-actions-wrap">
+      <a id="nav-auth-btn" class="header-profile-btn nav-auth-btn" href="/pages/login.html" title="Customer sign in"><span>Sign in</span></a>
+
+      <a class="header-cart-btn" href="javascript:void(0)" onclick="openCartDrawer()" title="Shopping Cart" aria-label="View Cart" style="position:relative;">
+        <span>🛒</span>
+        <span class="cart-count-badge" style="display:none;position:absolute;top:-4px;right:-4px;font-size:0.7rem;padding:2px 6px;">0</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- ================= MAIN CONTENT ================= -->
+  <main>
+    
+    <!-- Hero Section -->
+    <section class="home-hero">
+      <div class="hero-container">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span>🌿</span> 100% Pure &amp; Farm Fresh
+          </div>
+          <h1>Pure, Organic Dairy Delivered From Our Farm <span>To Your Family</span></h1>
+          <p class="hero-subtitle">
+            Enjoy unadulterated raw cow milk, traditional Vedic bilona ghee, thick natural curd, and fresh malai paneer delivered straight from our farm before 7:00 AM.
+          </p>
+          <div class="hero-actions">
+            <a class="button" href="/pages/products.html">Shop Fresh Dairy</a>
+            <a class="button button-outline" href="/pages/subscription.html">Start Daily Subscription →</a>
+            <a class="button button-secondary" href="https://wa.me/919603030888?text=Hello%20MilkyWay%20Farms,%20I%20would%20like%20to%20order%20fresh%20dairy" target="_blank" rel="noopener noreferrer">💬 WhatsApp Us</a>
+          </div>
+        </div>
+
+        <div class="hero-card-preview">
+          <div class="hero-card-header">
+            <div class="pulse-dot"></div>
+            <strong style="font-size:1.05rem;">Morning Delivery Active</strong>
+          </div>
+          <ul class="hero-feature-list">
+            <li class="hero-feature-item">
+              <span class="hero-feature-icon">✓</span>
+              <span>Pasture-grazed happy cattle</span>
+            </li>
+            <li class="hero-feature-item">
+              <span class="hero-feature-icon">✓</span>
+              <span>Zero preservatives, chemicals, or milk powder</span>
+            </li>
+            <li class="hero-feature-item">
+              <span class="hero-feature-icon">✓</span>
+              <span>Hygienic eco-friendly glass bottles</span>
+            </li>
+            <li class="hero-feature-item">
+              <span class="hero-feature-icon">✓</span>
+              <span>Delivered chilled to doorstep before 7:00 AM</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trust Strip -->
+    <section class="trust-strip" aria-label="Farm benefits">
+      <div class="trust-item">
+        <div class="trust-icon">🥛</div>
+        <div class="trust-info">
+          <strong>100% Pure</strong>
+          <span>Farm chilled &amp; unadulterated</span>
+        </div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon">⏰</div>
+        <div class="trust-info">
+          <strong>Before 7 AM</strong>
+          <span>Daily morning doorstep slots</span>
+        </div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon">📅</div>
+        <div class="trust-info">
+          <strong>Flexible Plans</strong>
+          <span>Pause or skip anytime</span>
+        </div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon">⭐</div>
+        <div class="trust-info">
+          <strong>4.9/5 Rating</strong>
+          <span>500+ Happy local families</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products Section (All 8 Products) -->
+    <section class="section-block" id="home-products">
+      <div class="section-heading">
+        <p class="eyebrow">Pure &amp; Farm Fresh</p>
+        <h2>Our Farm Fresh Dairy Collection</h2>
+        <p>100% pure and preservative-free dairy products crafted daily from our pasture-raised herd.</p>
+      </div>
+
+      <div class="product-grid">
+        <!-- 1. Milk -->
+        <article class="product-card">
+          <div class="product-image-wrap" style="position:relative;cursor:pointer;" onclick="openQuickView('milk')">
+            <img src="/images/milk/milk.jpg" alt="Farm Fresh Milk" loading="lazy" onerror="this.src='/images/milk.jpg'">
+            <span class="product-badge">100% Pure &amp; Raw</span>
+            <button type="button" class="quick-view-btn" style="position:absolute;bottom:8px;right:8px;background:rgba(255,255,255,0.92);border:none;border-radius:20px;font-size:0.75rem;padding:0.25rem 0.6rem;font-weight:700;color:var(--forest);box-shadow:0 2px 6px rgba(0,0,0,0.15);">🔍 Info</button>
+          </div>
+          <div class="product-card-body">
+            <div class="product-meta">
+              <span class="product-unit">1 Litre Glass Bottle</span>
+              <span class="product-rating">★ 4.9 <span>(184)</span></span>
+            </div>
+            <h3 onclick="openQuickView('milk')" style="cursor:pointer;">Farm Fresh Milk</h3>
+            <p class="description">Unprocessed, farm-chilled pure cow milk straight from pasture-fed cows. Rich in natural nutrients and cream.</p>
+            <div class="product-card-footer">
+              <div class="price-tag">
+                <strong>₹50</strong>
+                <small>Per Litre</small>
+              </div>
+              <button type="button" class="button button-sm" onclick="addToCart('Farm Fresh Milk', 50, 1, 'milk', '/images/milk/milk.jpg', '1 Litre Glass Bottle')">Add to Cart</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 2. Curd -->
+        <article class="product-card">
+          <div class="product-image-wrap" style="position:relative;cursor:pointer;" onclick="openQuickView('curd')">
+            <img src="/images/curd/curd.jpg" alt="Natural Farm Curd" loading="lazy" onerror="this.src='/images/curd.jpg'">
+            <span class="product-badge">Probiotic Rich</span>
+            <button type="button" class="quick-view-btn" style="position:absolute;bottom:8px;right:8px;background:rgba(255,255,255,0.92);border:none;border-radius:20px;font-size:0.75rem;padding:0.25rem 0.6rem;font-weight:700;color:var(--forest);box-shadow:0 2px 6px rgba(0,0,0,0.15);">🔍 Info</button>
+          </div>
+          <div class="product-card-body">
+            <div class="product-meta">
+              <span class="product-unit">500g Clay Matka</span>
+              <span class="product-rating">★ 4.9 <span>(112)</span></span>
+            </div>
+            <h3 onclick="openQuickView('curd')" style="cursor:pointer;">Natural Farm Curd</h3>
+            <p class="description">Thick, creamy, and traditional setting in breathable earthen pots. Loaded with active live gut cultures.</p>
+            <div class="product-card-footer">
+              <div class="price-tag">
+                <strong>₹40</strong>
+                <small>Per Pot</small>
+              </div>
+              <button type="button" class="button button-sm" onclick="addToCart('Natural Farm Curd', 40, 1, 'curd', '/images/curd/curd.jpg', '500g Clay Matka')">Add to Cart</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 3. Ghee -->
+        <article class="product-card">
+          <div class="product-image-wrap" style="position:relative;cursor:pointer;" onclick="openQuickView('ghee')">
+            <img src="/images/ghee/ghee.jpg" alt="Pure Desi Cow Ghee" loading="lazy" onerror="this.src='/images/ghee.jpg'">
+            <span class="product-badge">Bilona Method</span>
+            <button type="button" class="quick-view-btn" style="position:absolute;bottom:8px;right:8px;background:rgba(255,255,255,0.92);border:none;border-radius:20px;font-size:0.75rem;padding:0.25rem 0.6rem;font-weight:700;color:var(--forest);box-shadow:0 2px 6px rgba(0,0,0,0.15);">🔍 Info</button>
+          </div>
+          <div class="product-card-body">
+            <div class="product-meta">
+              <span class="product-unit">500ml Glass Jar</span>
+              <span class="product-rating">★ 5.0 <span>(240)</span></span>
+            </div>
+            <h3 onclick="openQuickView('ghee')" style="cursor:pointer;">Pure Desi Cow Ghee</h3>
+            <p class="description">Traditional Vedic bilona churned ghee from whole curd with golden granules and divine aroma.</p>
+            <div class="product-card-footer">
+              <div class="price-tag">
+                <strong>₹200</strong>
+                <small>Per Jar</small>
+              </div>
+              <button type="button" class="button button-sm" onclick="addToCart('Pure Desi Cow Ghee', 200, 1, 'ghee', '/images/ghee/ghee.jpg', '500ml Glass Jar')">Add to Cart</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 4. Paneer -->
+        <article class="product-card">
+          <div class="product-image-wrap" style="position:relative;cursor:pointer;" onclick="openQuickView('paneer')">
+            <img src="/images/paneer/paneer.jpg" alt="Fresh Malai Paneer" loading="lazy" onerror="this.src='/images/paneer.jpg'">
+            <span class="product-badge">Melt In Mouth</span>
+            <button type="button" class="quick-view-btn" style="position:absolute;bottom:8px;right:8px;background:rgba(255,255,255,0.92);border:none;border-radius:20px;font-size:0.75rem;padding:0.25rem 0.6rem;font-weight:700;color:var(--forest);box-shadow:0 2px 6px rgba(0,0,0,0.15);">🔍 Info</button>
+          </div>
+          <div class="product-card-body">
+            <div class="product-meta">
+              <span class="product-unit">250g Vacuum Pack</span>
+              <span class="product-rating">★ 4.8 <span>(96)</span></span>
+            </div>
+            <h3 onclick="openQuickView('paneer')" style="cursor:pointer;">Fresh Malai Paneer</h3>
+            <p class="description">Super soft, protein-rich cottage cheese made from fresh whole milk with zero preservatives or starch.</p>
+            <div class="product-card-footer">
+              <div class="price-tag">
+                <strong>₹120</strong>
+                <small>Per Pack</small>
+              </div>
+              <button type="button" class="button button-sm" onclick="addToCart('Fresh Malai Paneer', 120, 1, 'paneer', '/images/paneer/paneer.jpg', '250g Vacuum Pack')">Add to Cart</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 5. Butter -->
+        <article class="product-card">
+          <div class="product-image-wrap" style="position:relative;cursor:pointer;" onclick="openQuickView('butter')">
+            <img src="/images/butter/butter.jpg" alt="Golden Farm Butter" loading="lazy" onerror="this.src='/images/butter.jpg'">
+            <span class="product-badge">Freshly Churned</span>
+            <button type="button" class="quick-view-btn" style="position:absolute;bottom:8px;right:8px;background:rgba(255,255,255,0.92);border:none;border-radius:20px;font-size:0.75rem;padding:0.25rem 0.6rem;font-weight:700;color:var(--forest);box-shadow:0 2px 6px rgba(0,0,0,0.15);">🔍 Info</button>
+          </div>
+          <div class="product-card-body">
+            <div class="product-meta">
+              <span class="product-unit">250g Block</span>
+              <span class="product-rating">★ 4.9 <span>(78)</span></span>
+            </div>
+            <h3 onclick="openQuickView('butter')" style="cursor:pointer;">Golden Farm Butter</h3>
+            <p class="description">Creamy, naturally sweet white-golden farm butter churned fresh every morning. Delicious on hot parathas.</p>
+            <div class="product-card-footer">
+              <div class="price-tag">
+                <strong>₹90</strong>
+                <small>Per Block</small>
+              </div>
+              <button type="button" class="button button-sm" onclick="addToCart('Golden Farm Butter', 90, 1, 'butter', '/images/butter/butter.jpg', '250g Block')">Add to Cart</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 6. Cheese -->
+        <article class="product-card">
+          <div class="product-image-wrap" style="position:relative;cursor:pointer;" onclick="openQuickView('cheese')">
+            <img src="/images/cheese/cheese.jpg" alt="Artisanal Farm Cheese" loading="lazy" onerror="this.src='/images/cheese.jpg'">
+            <span class="product-badge">Handcrafted</span>
+            <button type="button" class="quick-view-btn" style="position:absolute;bottom:8px;right:8px;background:rgba(255,255,255,0.92);border:none;border-radius:20px;font-size:0.75rem;padding:0.25rem 0.6rem;font-weight:700;color:var(--forest);box-shadow:0 2px 6px rgba(0,0,0,0.15);">🔍 Info</button>
+          </div>
+          <div class="product-card-body">
+            <div class="product-meta">
+              <span class="product-unit">200g Wheel</span>
+              <span class="product-rating">★ 4.7 <span>(65)</span></span>
+            </div>
+            <h3 onclick="openQuickView('cheese')" style="cursor:pointer;">Artisanal Farm Cheese</h3>
+            <p class="description">Hand-molded farm cheese aged to smooth, velvety consistency. Subtle nutty notes for gourmet dishes.</p>
+            <div class="product-card-footer">
+              <div class="price-tag">
+                <strong>₹150</strong>
+                <small>Per Wheel</small>
+              </div>
+              <button type="button" class="button button-sm" onclick="addToCart('Artisanal Farm Cheese', 150, 1, 'cheese', '/images/cheese/cheese.jpg', '200g Wheel')">Add to Cart</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 7. Lassi -->
+        <article class="product-card">
+          <div class="product-image-wrap" style="position:relative;cursor:pointer;" onclick="openQuickView('lassi')">
+            <img src="/images/lassi/lassi.jpg" alt="Traditional Sweet Lassi" loading="lazy" onerror="this.src='/images/lassi.jpg'">
+            <span class="product-badge">Chilled &amp; Creamy</span>
+            <button type="button" class="quick-view-btn" style="position:absolute;bottom:8px;right:8px;background:rgba(255,255,255,0.92);border:none;border-radius:20px;font-size:0.75rem;padding:0.25rem 0.6rem;font-weight:700;color:var(--forest);box-shadow:0 2px 6px rgba(0,0,0,0.15);">🔍 Info</button>
+          </div>
+          <div class="product-card-body">
+            <div class="product-meta">
+              <span class="product-unit">300ml Chilled Bottle</span>
+              <span class="product-rating">★ 4.9 <span>(142)</span></span>
+            </div>
+            <h3 onclick="openQuickView('lassi')" style="cursor:pointer;">Traditional Sweet Lassi</h3>
+            <p class="description">Authentic Punjabi style whipped sweetened yogurt drink topped with a hint of cardamom, saffron, and thick malai.</p>
+            <div class="product-card-footer">
+              <div class="price-tag">
+                <strong>₹35</strong>
+                <small>Per Bottle</small>
+              </div>
+              <button type="button" class="button button-sm" onclick="addToCart('Traditional Sweet Lassi', 35, 1, 'lassi', '/images/lassi/lassi.jpg', '300ml Chilled Bottle')">Add to Cart</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 8. Khoya -->
+        <article class="product-card">
+          <div class="product-image-wrap" style="position:relative;cursor:pointer;" onclick="openQuickView('khoya')">
+            <img src="/images/khoya/khoya.jpg" alt="Pure Mawa / Khoya" loading="lazy" onerror="this.src='/images/khoya.jpg'">
+            <span class="product-badge">100% Milk Solids</span>
+            <button type="button" class="quick-view-btn" style="position:absolute;bottom:8px;right:8px;background:rgba(255,255,255,0.92);border:none;border-radius:20px;font-size:0.75rem;padding:0.25rem 0.6rem;font-weight:700;color:var(--forest);box-shadow:0 2px 6px rgba(0,0,0,0.15);">🔍 Info</button>
+          </div>
+          <div class="product-card-body">
+            <div class="product-meta">
+              <span class="product-unit">250g Fresh Pack</span>
+              <span class="product-rating">★ 4.8 <span>(54)</span></span>
+            </div>
+            <h3 onclick="openQuickView('khoya')" style="cursor:pointer;">Pure Mawa / Khoya</h3>
+            <p class="description">Slowly reduced whole milk solids with zero added sugar or flour. Essential for rich homemade sweets.</p>
+            <div class="product-card-footer">
+              <div class="price-tag">
+                <strong>₹180</strong>
+                <small>Per Pack</small>
+              </div>
+              <button type="button" class="button button-sm" onclick="addToCart('Pure Mawa / Khoya', 180, 1, 'khoya', '/images/khoya/khoya.jpg', '250g Fresh Pack')">Add to Cart</button>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div style="text-align:center;margin-top:2.5rem;">
+        <a class="button button-secondary" href="/pages/products.html">View Filtered Catalog &amp; Search →</a>
+      </div>
+    </section>
+
+    <!-- Milk Subscription Promo & Interactive Calculator -->
+    <section class="subscription-promo">
+      <div>
+        <p class="eyebrow" style="color:var(--gold-light);">Smart Dairy Routine</p>
+        <h2>Fresh Milk Delivered on Your Schedule</h2>
+        <p>Set it once and enjoy hassle-free milk every morning before breakfast. Modify, pause for vacations, or skip days anytime with zero cancellation fees.</p>
+        
+        <div class="sub-benefit-grid">
+          <div class="sub-benefit-item">
+            <span>✓</span>
+            <div><strong>Never Run Out</strong><br><small style="color:#c5e3d1;">Automatic morning delivery</small></div>
+          </div>
+          <div class="sub-benefit-item">
+            <span>✓</span>
+            <div><strong>Flexible Controls</strong><br><small style="color:#c5e3d1;">Pause or change quantity</small></div>
+          </div>
+          <div class="sub-benefit-item">
+            <span>✓</span>
+            <div><strong>Free Doorstep Delivery</strong><br><small style="color:#c5e3d1;">No extra delivery charges</small></div>
+          </div>
+          <div class="sub-benefit-item">
+            <span>✓</span>
+            <div><strong>Zero Advance Payment</strong><br><small style="color:#c5e3d1;">Pay after monthly confirmation</small></div>
+          </div>
+        </div>
+
+        <a class="button" href="/pages/subscription.html">Start Your Milk Plan</a>
+      </div>
+
+      <div class="sub-calculator-card">
+        <h3>Estimate Your Monthly Plan</h3>
+        <label for="sub-freq">Delivery Frequency</label>
+        <select id="sub-freq">
+          <option value="daily">Daily (30 deliveries / month)</option>
+          <option value="alternate">Alternate Days (15 deliveries / month)</option>
+          <option value="weekly">Weekly (5 deliveries / month)</option>
+        </select>
+
+        <label for="sub-qty">Milk Quantity Per Day</label>
+        <select id="sub-qty">
+          <option value="1">1 Litre / day</option>
+          <option value="2">2 Litres / day</option>
+          <option value="3">3 Litres / day</option>
+          <option value="4">4 Litres / day</option>
+        </select>
+
+        <div id="subscription-preview">
+          <!-- Dynamically populated by main.js -->
+        </div>
+
+        <a href="/pages/subscription.html" class="button" style="width:100%;text-align:center;">Proceed to Subscribe</a>
+      </div>
+    </section>
+
+    <!-- Process & Quality Assurance -->
+    <section class="section-block">
+      <div class="section-heading">
+        <p class="eyebrow">Our Hygiene Promise</p>
+        <h2>From Our Farm to Your Cup in 3 Hours</h2>
+        <p>We believe good food starts with ethical farming, clean processes, and honest relationships.</p>
+      </div>
+
+      <div class="process-grid">
+        <div class="process-card">
+          <div class="process-step-num">1</div>
+          <h3>Pasture Grazing</h3>
+          <p>Our cattle graze freely on organic green fodder and pesticide-free pasture, ensuring nutrient-dense milk.</p>
+        </div>
+        <div class="process-card">
+          <div class="process-step-num">2</div>
+          <h3>Touchless Milking</h3>
+          <p>Hygienic automated milking with direct sanitised stainless steel lines ensures zero human contact.</p>
+        </div>
+        <div class="process-card">
+          <div class="process-step-num">3</div>
+          <h3>Rapid Chilling (4°C)</h3>
+          <p>Milk is immediately chilled within 45 minutes of milking to preserve natural enzymes, vitamins, and freshness.</p>
+        </div>
+        <div class="process-card">
+          <div class="process-step-num">4</div>
+          <h3>Early Morning Delivery</h3>
+          <p>Delivered in insulated containers to your doorstep before 7:00 AM, ready for your morning tea and family breakfast.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews Section with Dynamic Container & Form -->
+    <section class="section-block">
+      <div class="section-heading">
+        <p class="eyebrow">Loved by Families</p>
+        <h2>What Our Customers Say</h2>
+        <p>Real feedback from local residents who start their mornings with MilkyWay Farms.</p>
+      </div>
+
+      <div class="reviews-grid" id="reviews-container">
+        <!-- Dynamically populated by main.js -->
+      </div>
+
+      <!-- Customer Review Form -->
+      <div class="review-form-card">
+        <h3 style="margin:0 0 0.4rem;color:var(--forest);font-size:1.25rem;">Share Your Farm Experience</h3>
+        <p style="color:var(--muted);font-size:0.88rem;margin-bottom:1rem;">Have you tried our fresh milk or ghee? Leave your review below!</p>
+
+        <form id="customer-review-form">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+            <div>
+              <label for="review-name">Your Name</label>
+              <input id="review-name" placeholder="e.g. Ramesh V." required>
+            </div>
+            <div>
+              <label for="review-location">City / Location</label>
+              <input id="review-location" placeholder="e.g. Guntur" required>
+            </div>
+          </div>
+
+          <label for="review-product">Product Purchased</label>
+          <select id="review-product">
+            <option value="Farm Fresh Milk">Farm Fresh Milk</option>
+            <option value="Natural Farm Curd">Natural Farm Curd</option>
+            <option value="Pure Desi Cow Ghee">Pure Desi Cow Ghee</option>
+            <option value="Fresh Malai Paneer">Fresh Malai Paneer</option>
+            <option value="Golden Farm Butter">Golden Farm Butter</option>
+            <option value="Artisanal Farm Cheese">Artisanal Farm Cheese</option>
+            <option value="Traditional Sweet Lassi">Traditional Sweet Lassi</option>
+            <option value="Milk Subscription">Daily Milk Subscription</option>
+          </select>
+
+          <label>Rating</label>
+          <div class="rating-stars-input">
+            <button type="button" class="rating-star-btn active" data-val="1">★</button>
+            <button type="button" class="rating-star-btn active" data-val="2">★</button>
+            <button type="button" class="rating-star-btn active" data-val="3">★</button>
+            <button type="button" class="rating-star-btn active" data-val="4">★</button>
+            <button type="button" class="rating-star-btn active" data-val="5">★</button>
+          </div>
+
+          <label for="review-comment">Your Review / Feedback</label>
+          <textarea id="review-comment" placeholder="Tell us about the freshness, taste, and morning delivery..." required></textarea>
+
+          <button type="submit" class="button" style="margin-top:0.75rem;">Submit Review</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- FAQ Accordion -->
+    <section class="section-block">
+      <div class="section-heading">
+        <p class="eyebrow">Got Questions?</p>
+        <h2>Frequently Asked Questions</h2>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item open">
+          <button class="faq-question" type="button">
+            <span>What time will the milk be delivered?</span>
+            <span class="faq-icon">▼</span>
+          </button>
+          <div class="faq-answer">
+            Our morning delivery slot runs between 5:30 AM and 7:00 AM every day so you always have fresh milk ready for your morning routine. We also offer an evening slot between 5:00 PM and 7:00 PM upon request.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" type="button">
+            <span>Is your milk raw or pasteurised?</span>
+            <span class="faq-icon">▼</span>
+          </button>
+          <div class="faq-answer">
+            Our milk is fresh, raw, and rapidly chilled to 4°C immediately after milking. It contains no preservatives, stabilizers, or added milk powder. We recommend boiling it once before consumption.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" type="button">
+            <span>How do subscription pauses or vacation skips work?</span>
+            <span class="faq-icon">▼</span>
+          </button>
+          <div class="faq-answer">
+            You can pause, resume, or change your daily quantity anytime via our subscription page or by messaging us directly on WhatsApp at least 12 hours in advance.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" type="button">
+            <span>How does payment work?</span>
+            <span class="faq-icon">▼</span>
+          </button>
+          <div class="faq-answer">
+            For individual orders, we accept Cash on Delivery (COD) and UPI upon delivery. For monthly subscriptions, a consolidated monthly statement is sent for easy settlement.
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <a href="/" class="brand">
+          <img src="/images/logo.jpeg" alt="MilkyWay Farms Logo" class="site-logo">
+          <div class="brand-text">
+            <strong>MilkyWay Farms</strong>
+            <small>FRESHNESS, EVERY DAY</small>
+          </div>
+        </a>
+        <p>Chanumolu Harsha Vardhan · Committed to delivering 100% pure, unadulterated farm-fresh dairy straight from healthy pasture-raised cattle to your family table.</p>
+      </div>
+
+      <div class="footer-column">
+        <h4>Products</h4>
+        <ul>
+          <li><a href="/pages/products.html">Farm Fresh Milk</a></li>
+          <li><a href="/pages/products.html">Natural Farm Curd</a></li>
+          <li><a href="/pages/products.html">Pure Desi Cow Ghee</a></li>
+          <li><a href="/pages/products.html">Fresh Malai Paneer</a></li>
+          <li><a href="/pages/products.html">Golden Farm Butter</a></li>
+          <li><a href="/pages/products.html">Sweet Lassi &amp; Khoya</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/pages/subscription.html">Milk Subscription</a></li>
+          <li><a href="/pages/about.html">Our Farm Story</a></li>
+          <li><a href="/pages/contact.html">Contact Us</a></li>
+          <li><a href="/pages/checkout.html">View Cart</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Contact &amp; Support</h4>
+        <ul>
+          <li>📞 <a href="tel:+919603030888">+91 96030 30888</a></li>
+          <li>💬 <a href="https://wa.me/919603030888" target="_blank" rel="noopener noreferrer">WhatsApp Support</a></li>
+          <li>🕒 Mon–Sun: 5:30 AM – 8:00 PM</li>
+          <li>📍 Direct Farm Delivery Network</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 MilkyWay Farms · Chanumolu Harsha Vardhan. All rights reserved.</span>
+      <div style="display:flex;align-items:center;gap:1rem;">
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

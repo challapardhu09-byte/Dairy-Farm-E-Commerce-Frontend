@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Review your cart and complete your order for farm-fresh dairy from MilkyWay Farms.">
+  <title>Shopping Cart &amp; Checkout | MilkyWay Farms</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/main.js" defer></script>
+  <script src="/js/auth.js" defer></script>
+</head>
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <!-- ================= SITE HEADER ================= -->
+  <!-- ================= SITE HEADER ================= -->
+  <header class="site-header">
+    <a href="/" class="brand" aria-label="MilkyWay Farms Homepage">
+      <img src="/images/logo.jpeg" alt="MilkyWay Farms Logo" class="site-logo">
+      <div class="brand-text">
+        <strong>MilkyWay Farms</strong>
+        <small>FRESHNESS, EVERY DAY</small>
+      </div>
+    </a>
+
+    <button class="mobile-nav-toggle" aria-label="Toggle navigation menu">☰</button>
+
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="/" class="">Home</a>
+      <a href="/pages/products.html" class="">Shop Dairy</a>
+      <a href="/pages/subscription.html" class="">Milk Subscription</a>
+      <a href="/pages/about.html" class="">About Us</a>
+      <a href="/pages/contact.html" class="">Contact Us</a>
+    </nav>
+
+    <!-- Header Action Icons (Profile & Cart) -->
+    <div class="header-actions-wrap">
+      <a id="nav-auth-btn" class="header-profile-btn nav-auth-btn" href="/pages/login.html" title="Customer sign in"><span>Sign in</span></a>
+
+      <a class="header-cart-btn" href="javascript:void(0)" onclick="openCartDrawer()" title="Shopping Cart" aria-label="View Cart" style="position:relative;">
+        <span>🛒</span>
+        <span class="cart-count-badge" style="display:none;position:absolute;top:-4px;right:-4px;font-size:0.7rem;padding:2px 6px;">0</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- ================= MAIN CONTENT ================= -->
+  <main>
+    <section class="section-block">
+      <div class="section-heading">
+        <p class="eyebrow">Fresh To Your Door</p>
+        <h1>Review Cart &amp; Checkout</h1>
+        <p>Confirm your items, choose payment mode, and schedule morning delivery.</p>
+      </div>
+
+      <div class="checkout-layout">
+        <!-- Delivery & Payment Form -->
+        <div class="customer-details">
+          <h2>1. Delivery Details</h2>
+          <form id="checkout-form">
+            <label for="customer-name">Full Name</label>
+            <input type="text" id="customer-name" placeholder="e.g. Suresh Patel" required>
+
+            <label for="customer-mobile">Mobile Number (For Morning Delivery Call)</label>
+            <input type="tel" id="customer-mobile" inputmode="numeric" placeholder="10-digit number" required>
+
+            <label for="customer-email">Email Address <span style="font-weight:400;color:var(--muted);">(Optional)</span></label>
+            <input type="email" id="customer-email" placeholder="name@example.com">
+
+            <label for="customer-address">Complete Delivery Address</label>
+            <textarea id="customer-address" placeholder="Flat/House No., Building, Street Name, Landmark" required></textarea>
+
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+              <div>
+                <label for="delivery-date">Preferred Delivery Date</label>
+                <input type="date" id="delivery-date" required>
+              </div>
+
+              <div>
+                <label for="delivery-time">Time Slot</label>
+                <select id="delivery-time">
+                  <option value="Morning (5:30 AM – 7:00 AM)">Morning (5:30 AM – 7:00 AM)</option>
+                  <option value="Evening (5:00 PM – 7:00 PM)">Evening (5:00 PM – 7:00 PM)</option>
+                </select>
+              </div>
+            </div>
+
+            <h2 style="margin-top:1.5rem;">2. Payment Method</h2>
+            <div class="payment-tabs">
+              <label class="payment-tab active" id="tab-cod">
+                <input type="radio" name="payment-method" value="cod" checked>
+                <span style="font-size:1.5rem;">💵</span>
+                <strong>Cash on Delivery</strong>
+                <small style="color:var(--muted);font-size:0.78rem;">Pay cash or UPI upon delivery</small>
+              </label>
+
+              <label class="payment-tab" id="tab-upi">
+                <input type="radio" name="payment-method" value="upi">
+                <span style="font-size:1.5rem;">📱</span>
+                <strong>Instant UPI QR</strong>
+                <small style="color:var(--muted);font-size:0.78rem;">GPay / PhonePe / Paytm</small>
+              </label>
+            </div>
+
+            <!-- Dynamic UPI Box -->
+            <div id="upi-payment-details" class="upi-payment-box" style="display:none;">
+              <span class="eyebrow" style="color:var(--forest);">Scan to Pay Now</span>
+              <p style="font-size:0.88rem;color:var(--muted);margin:0.2rem 0 0.6rem;">Scan this dynamic QR code with any UPI app to pay the exact amount.</p>
+              
+              <div class="upi-qr-frame">
+                <img id="checkout-upi-qr" hidden alt="Use the UPI payment link below">
+              </div>
+
+              <div style="font-size:0.85rem;color:var(--ink);margin-top:0.4rem;">
+                UPI ID: <strong>9603030888@upi</strong><br>
+                <a id="checkout-upi-link" href="upi://pay?pa=9603030888@upi" class="button button-sm button-secondary" style="margin-top:0.5rem;display:inline-block;">📲 Open in UPI App</a>
+              </div>
+            </div>
+
+            <button type="submit" class="button" style="width:100%;margin-top:1.5rem;">Place Order Request</button>
+          </form>
+
+          <div id="order-confirmation" class="order-confirmation" hidden aria-live="polite"></div>
+        </div>
+
+        <!-- Cart Summary & Coupon -->
+        <div class="cart-summary">
+          <h2>Order Summary</h2>
+          <ul id="cart-items">
+            <!-- Populated by main.js -->
+          </ul>
+
+          <div style="margin:1rem 0;background:var(--white);padding:0.75rem;border-radius:var(--radius-md);border:1px solid var(--line);">
+            <label for="checkout-promo-input" style="font-size:0.8rem;margin-bottom:0.2rem;">Have a promo code?</label>
+            <div style="display:flex;gap:0.4rem;">
+              <input type="text" id="checkout-promo-input" placeholder="e.g. FRESH10 or MILK50" style="margin:0;padding:0.4rem 0.6rem;font-size:0.85rem;text-transform:uppercase;">
+              <button type="button" class="button button-sm" onclick="applyPromoCode()">Apply</button>
+            </div>
+            <small style="color:var(--leaf);display:block;margin-top:0.3rem;font-weight:600;">✨ Try code FRESH10 for 10% Off</small>
+          </div>
+
+          <div class="total-row">
+            <div>
+              <span style="display:block;color:var(--muted);font-size:0.85rem;font-weight:600;">Final Amount</span>
+              <strong>₹<span id="cart-total">0</span></strong>
+            </div>
+            <button type="button" id="clear-cart-btn" class="button-outline-dark button-sm">Clear Cart</button>
+          </div>
+
+          <div style="margin-top:1.25rem;padding:0.85rem;border-radius:var(--radius-md);background:var(--mint);border:1px solid #cce4d2;font-size:0.85rem;color:var(--forest);">
+            <strong>🚚 Free Farm Delivery:</strong> Fresh sunrise delivery directly to your door!
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <a href="/" class="brand">
+          <img src="/images/logo.jpeg" alt="MilkyWay Farms Logo" class="site-logo">
+          <div class="brand-text">
+            <strong>MilkyWay Farms</strong>
+            <small>FRESHNESS, EVERY DAY</small>
+          </div>
+        </a>
+        <p>Chanumolu Harsha Vardhan · Committed to delivering 100% pure, unadulterated farm-fresh dairy straight from healthy pasture-raised cattle to your family table.</p>
+      </div>
+
+      <div class="footer-column">
+        <h4>Products</h4>
+        <ul>
+          <li><a href="/pages/products.html">Farm Fresh Milk</a></li>
+          <li><a href="/pages/products.html">Natural Farm Curd</a></li>
+          <li><a href="/pages/products.html">Pure Desi Cow Ghee</a></li>
+          <li><a href="/pages/products.html">Fresh Malai Paneer</a></li>
+          <li><a href="/pages/products.html">Golden Farm Butter</a></li>
+          <li><a href="/pages/products.html">Sweet Lassi &amp; Khoya</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/pages/subscription.html">Milk Subscription</a></li>
+          <li><a href="/pages/about.html">Our Farm Story</a></li>
+          <li><a href="/pages/contact.html">Contact Us</a></li>
+          <li><a href="/pages/checkout.html">View Cart</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Contact &amp; Support</h4>
+        <ul>
+          <li>📞 <a href="tel:+919603030888">+91 96030 30888</a></li>
+          <li>💬 <a href="https://wa.me/919603030888" target="_blank" rel="noopener noreferrer">WhatsApp Support</a></li>
+          <li>🕒 Mon–Sun: 5:30 AM – 8:00 PM</li>
+          <li>📍 Direct Farm Delivery Network</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 MilkyWay Farms · Chanumolu Harsha Vardhan. All rights reserved.</span>
+      <div style="display:flex;align-items:center;gap:1rem;">
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

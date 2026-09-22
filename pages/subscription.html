@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Set up your monthly milk subscription with MilkyWay Farms. Pure farm milk delivered daily to your doorstep before 7:00 AM.">
+  <title>Milk Subscription Plans | MilkyWay Farms</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/main.js" defer></script>
+  <script src="/js/auth.js" defer></script>
+</head>
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <!-- ================= SITE HEADER ================= -->
+  <!-- ================= SITE HEADER ================= -->
+  <header class="site-header">
+    <a href="/" class="brand" aria-label="MilkyWay Farms Homepage">
+      <img src="/images/logo.jpeg" alt="MilkyWay Farms Logo" class="site-logo">
+      <div class="brand-text">
+        <strong>MilkyWay Farms</strong>
+        <small>FRESHNESS, EVERY DAY</small>
+      </div>
+    </a>
+
+    <button class="mobile-nav-toggle" aria-label="Toggle navigation menu">☰</button>
+
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="/" class="">Home</a>
+      <a href="/pages/products.html" class="">Shop Dairy</a>
+      <a href="/pages/subscription.html" class="active">Milk Subscription</a>
+      <a href="/pages/about.html" class="">About Us</a>
+      <a href="/pages/contact.html" class="">Contact Us</a>
+    </nav>
+
+    <!-- Header Action Icons (Profile & Cart) -->
+    <div class="header-actions-wrap">
+      <a id="nav-auth-btn" class="header-profile-btn nav-auth-btn" href="/pages/login.html" title="Customer sign in"><span>Sign in</span></a>
+
+      <a class="header-cart-btn" href="javascript:void(0)" onclick="openCartDrawer()" title="Shopping Cart" aria-label="View Cart" style="position:relative;">
+        <span>🛒</span>
+        <span class="cart-count-badge" style="display:none;position:absolute;top:-4px;right:-4px;font-size:0.7rem;padding:2px 6px;">0</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- ================= MAIN CONTENT ================= -->
+  <main>
+    <section class="section-block">
+      <div class="section-heading">
+        <p class="eyebrow">Hassle-Free Daily Routine</p>
+        <h1>Monthly Milk Subscription</h1>
+        <p>Choose your preferred quantity, frequency, and time slot. Enjoy pure farm milk delivered chilled before 7:00 AM every day.</p>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1.1fr 0.9fr;gap:2.5rem;max-width:1100px;margin:0 auto;align-items:start;">
+        <!-- Subscription Form -->
+        <div class="content-card" style="margin:0;max-width:none;">
+          <h2 style="font-size:1.35rem;margin-bottom:0.4rem;">Set Up Your Delivery Plan</h2>
+          <p style="color:var(--muted);font-size:0.9rem;margin-bottom:1.5rem;">Fill out the details below to schedule your morning deliveries.</p>
+
+          <form id="subscription-form">
+            <label for="sub-name">Customer Full Name</label>
+            <input id="sub-name" placeholder="e.g. Suresh Patel" required>
+
+            <label for="sub-mobile">Mobile Number (WhatsApp Enabled)</label>
+            <input id="sub-mobile" type="tel" inputmode="numeric" placeholder="10-digit mobile number" required>
+
+            <label for="sub-address">Delivery Address &amp; Landmarks</label>
+            <textarea id="sub-address" placeholder="House/Flat No., Building, Street, Landmark" required></textarea>
+
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+              <div>
+                <label for="delivery-frequency">Delivery Frequency</label>
+                <select id="delivery-frequency" required>
+                  <option value="daily">Daily (30 deliveries)</option>
+                  <option value="alternate">Every 2 days (15 deliveries)</option>
+                  <option value="weekly">Weekly (5 deliveries)</option>
+                  <option value="monthly">Monthly Once</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="quantity">Quantity Per Day (Litres)</label>
+                <input type="number" id="quantity" min="0.5" step="0.5" value="1" required>
+              </div>
+            </div>
+
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+              <div>
+                <label for="delivery-start">Start Date</label>
+                <input type="date" id="delivery-start" required>
+              </div>
+
+              <div>
+                <label for="delivery-time">Preferred Time Slot</label>
+                <select id="delivery-time">
+                  <option value="morning">Morning (5:30 AM – 7:00 AM)</option>
+                  <option value="evening">Evening (5:00 PM – 7:00 PM)</option>
+                </select>
+              </div>
+            </div>
+
+            <div id="subscription-preview" class="subscription-preview" style="margin-top:1.5rem;">
+              <!-- Calculated live by main.js -->
+            </div>
+
+            <button type="submit" class="button" style="width:100%;margin-top:1rem;">Send Subscription Request</button>
+
+            <p class="form-hint" style="text-align:center;margin-top:0.8rem;">
+              🔒 No advance payment required now. Our farm manager will confirm your delivery schedule on WhatsApp.
+            </p>
+
+            <div id="subscription-message" class="form-message" aria-live="polite"></div>
+          </form>
+        </div>
+
+        <!-- Benefits & Management Side Column -->
+        <div style="display:grid;gap:1.5rem;">
+          <div class="content-card" style="margin:0;max-width:none;background:var(--mint-light);border-color:#cfe3d4;">
+            <h3 style="color:var(--forest);font-size:1.15rem;margin-bottom:0.8rem;">✨ Subscriber Benefits</h3>
+            <ul style="list-style:none;padding:0;margin:0;display:grid;gap:0.75rem;font-size:0.9rem;color:var(--ink);">
+              <li style="display:flex;align-items:flex-start;gap:0.5rem;">
+                <span style="color:var(--leaf);font-weight:900;">✓</span>
+                <span><strong>Guaranteed Sunrise Delivery:</strong> Always at your door before 7:00 AM.</span>
+              </li>
+              <li style="display:flex;align-items:flex-start;gap:0.5rem;">
+                <span style="color:var(--leaf);font-weight:900;">✓</span>
+                <span><strong>Zero Delivery Charges:</strong> Absolutely free doorstep service.</span>
+              </li>
+              <li style="display:flex;align-items:flex-start;gap:0.5rem;">
+                <span style="color:var(--leaf);font-weight:900;">✓</span>
+                <span><strong>Glass Bottle Hygiene:</strong> Sanitised reusable glass bottles.</span>
+              </li>
+              <li style="display:flex;align-items:flex-start;gap:0.5rem;">
+                <span style="color:var(--leaf);font-weight:900;">✓</span>
+                <span><strong>Monthly Billing:</strong> Consolidated easy settlement at month end.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="content-card" style="margin:0;max-width:none;">
+            <h3 style="color:var(--forest);font-size:1.15rem;margin-bottom:0.4rem;">Manage Active Plan</h3>
+            <p style="color:var(--muted);font-size:0.88rem;margin-bottom:1rem;">Travelling or need to adjust your deliveries? Use quick controls below.</p>
+            <div style="display:flex;flex-wrap:wrap;gap:0.5rem;">
+              <button type="button" class="button button-sm button-secondary" onclick="pauseSubscription()">⏸ Pause Plan</button>
+              <button type="button" class="button button-sm button-secondary" onclick="skipSubscription()">⏭ Skip Next Day</button>
+              <button type="button" class="button button-sm" style="background:#dc2626;" onclick="cancelSubscription()">✕ Cancel</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <a href="/" class="brand">
+          <img src="/images/logo.jpeg" alt="MilkyWay Farms Logo" class="site-logo">
+          <div class="brand-text">
+            <strong>MilkyWay Farms</strong>
+            <small>FRESHNESS, EVERY DAY</small>
+          </div>
+        </a>
+        <p>Chanumolu Harsha Vardhan · Committed to delivering 100% pure, unadulterated farm-fresh dairy straight from healthy pasture-raised cattle to your family table.</p>
+      </div>
+
+      <div class="footer-column">
+        <h4>Products</h4>
+        <ul>
+          <li><a href="/pages/products.html">Farm Fresh Milk</a></li>
+          <li><a href="/pages/products.html">Natural Farm Curd</a></li>
+          <li><a href="/pages/products.html">Pure Desi Cow Ghee</a></li>
+          <li><a href="/pages/products.html">Fresh Malai Paneer</a></li>
+          <li><a href="/pages/products.html">Golden Farm Butter</a></li>
+          <li><a href="/pages/products.html">Sweet Lassi &amp; Khoya</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/pages/subscription.html">Milk Subscription</a></li>
+          <li><a href="/pages/about.html">Our Farm Story</a></li>
+          <li><a href="/pages/contact.html">Contact Us</a></li>
+          <li><a href="/pages/checkout.html">View Cart</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Contact &amp; Support</h4>
+        <ul>
+          <li>📞 <a href="tel:+919603030888">+91 96030 30888</a></li>
+          <li>💬 <a href="https://wa.me/919603030888" target="_blank" rel="noopener noreferrer">WhatsApp Support</a></li>
+          <li>🕒 Mon–Sun: 5:30 AM – 8:00 PM</li>
+          <li>📍 Direct Farm Delivery Network</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 MilkyWay Farms · Chanumolu Harsha Vardhan. All rights reserved.</span>
+      <div style="display:flex;align-items:center;gap:1rem;">
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

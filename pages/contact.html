@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact MilkyWay Farms. Direct phone, WhatsApp support, and customer assistance for fresh dairy orders and milk subscriptions.">
+  <title>Contact Us | MilkyWay Farms</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/main.js" defer></script>
+</head>
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <!-- ================= SITE HEADER ================= -->
+  <!-- ================= SITE HEADER ================= -->
+  <header class="site-header">
+    <a href="/" class="brand" aria-label="MilkyWay Farms Homepage">
+      <img src="/images/logo.jpeg" alt="MilkyWay Farms Logo" class="site-logo">
+      <div class="brand-text">
+        <strong>MilkyWay Farms</strong>
+        <small>FRESHNESS, EVERY DAY</small>
+      </div>
+    </a>
+
+    <button class="mobile-nav-toggle" aria-label="Toggle navigation menu">☰</button>
+
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="/" class="">Home</a>
+      <a href="/pages/products.html" class="">Shop Dairy</a>
+      <a href="/pages/subscription.html" class="">Milk Subscription</a>
+      <a href="/pages/about.html" class="">About Us</a>
+      <a href="/pages/contact.html" class="active">Contact Us</a>
+    </nav>
+
+    <!-- Header Action Icons (Profile & Cart) -->
+    <div class="header-actions-wrap">
+      <a id="nav-auth-btn" class="header-profile-btn nav-auth-btn" href="/pages/login.html" title="Customer sign in"><span>Sign in</span></a>
+
+      <a class="header-cart-btn" href="javascript:void(0)" onclick="openCartDrawer()" title="Shopping Cart" aria-label="View Cart" style="position:relative;">
+        <span>🛒</span>
+        <span class="cart-count-badge" style="display:none;position:absolute;top:-4px;right:-4px;font-size:0.7rem;padding:2px 6px;">0</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- ================= MAIN CONTENT ================= -->
+  <main>
+    <section class="section-block">
+      <div class="section-heading">
+        <p class="eyebrow">Always Here For You</p>
+        <h1>Get in Touch With Our Farm</h1>
+        <p>Whether you want to place a quick bulk order, customize your subscription, or enquire about farm visits, our team is happy to help.</p>
+      </div>
+
+      <div class="contact-grid" style="max-width:1050px;margin:0 auto;align-items:start;">
+        <!-- Contact Details -->
+        <div style="display:grid;gap:1.25rem;">
+          <div class="contact-card-box">
+            <h3>💬 Instant WhatsApp Chat</h3>
+            <p style="color:var(--muted);font-size:0.9rem;">Chat directly with our farm operations team for quick questions, order tracking, or delivery requests.</p>
+            <a href="https://wa.me/919603030888?text=Hello%20MilkyWay%20Farms,%20I%20have%20an%20enquiry" target="_blank" rel="noopener noreferrer" class="button button-sm" style="background:#25d366;color:#fff;">
+              Chat on WhatsApp: +91 96030 30888
+            </a>
+          </div>
+
+          <div class="contact-card-box">
+            <h3>📞 Direct Phone Support</h3>
+            <p style="color:var(--muted);font-size:0.9rem;">Call us during working hours for immediate customer assistance.</p>
+            <a href="tel:+919603030888" style="font-size:1.15rem;font-weight:800;color:var(--forest);display:inline-block;margin-top:0.2rem;">
+              +91 96030 30888
+            </a>
+          </div>
+
+          <div class="contact-card-box">
+            <h3>🕒 Operational Hours</h3>
+            <p style="margin:0;color:var(--ink);font-size:0.9rem;">
+              <strong>Morning Dispatch:</strong> 5:30 AM – 7:00 AM<br>
+              <strong>Customer Support:</strong> Monday – Sunday, 6:00 AM – 8:00 PM
+            </p>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="content-card" style="margin:0;max-width:none;">
+          <h2 style="font-size:1.35rem;margin-bottom:0.4rem;">Send a Message</h2>
+          <p style="color:var(--muted);font-size:0.88rem;margin-bottom:1.25rem;">Leave your message and contact info. We will get back to you promptly.</p>
+
+          <form id="contact-form">
+            <label for="contact-name">Your Full Name</label>
+            <input type="text" id="contact-name" placeholder="e.g. Ananya Reddy" required>
+
+            <label for="contact-email">Email Address</label>
+            <input type="email" id="contact-email" placeholder="name@example.com" required>
+
+            <label for="contact-message">Your Message or Enquiry</label>
+            <textarea id="contact-message" placeholder="How can we help you?" required></textarea>
+
+            <button type="submit" class="button" style="width:100%;margin-top:1.25rem;">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <a href="/" class="brand">
+          <img src="/images/logo.jpeg" alt="MilkyWay Farms Logo" class="site-logo">
+          <div class="brand-text">
+            <strong>MilkyWay Farms</strong>
+            <small>FRESHNESS, EVERY DAY</small>
+          </div>
+        </a>
+        <p>Chanumolu Harsha Vardhan · Committed to delivering 100% pure, unadulterated farm-fresh dairy straight from healthy pasture-raised cattle to your family table.</p>
+      </div>
+
+      <div class="footer-column">
+        <h4>Products</h4>
+        <ul>
+          <li><a href="/pages/products.html">Farm Fresh Milk</a></li>
+          <li><a href="/pages/products.html">Natural Farm Curd</a></li>
+          <li><a href="/pages/products.html">Pure Desi Cow Ghee</a></li>
+          <li><a href="/pages/products.html">Fresh Malai Paneer</a></li>
+          <li><a href="/pages/products.html">Golden Farm Butter</a></li>
+          <li><a href="/pages/products.html">Sweet Lassi &amp; Khoya</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/pages/subscription.html">Milk Subscription</a></li>
+          <li><a href="/pages/about.html">Our Farm Story</a></li>
+          <li><a href="/pages/contact.html">Contact Us</a></li>
+          <li><a href="/pages/checkout.html">View Cart</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Contact &amp; Support</h4>
+        <ul>
+          <li>📞 <a href="tel:+919603030888">+91 96030 30888</a></li>
+          <li>💬 <a href="https://wa.me/919603030888" target="_blank" rel="noopener noreferrer">WhatsApp Support</a></li>
+          <li>🕒 Mon–Sun: 5:30 AM – 8:00 PM</li>
+          <li>📍 Direct Farm Delivery Network</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 MilkyWay Farms · Chanumolu Harsha Vardhan. All rights reserved.</span>
+      <div style="display:flex;align-items:center;gap:1rem;">
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

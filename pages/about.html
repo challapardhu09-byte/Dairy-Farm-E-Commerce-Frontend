@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn about MilkyWay Farms — ethical dairy farming, grass-fed cows, hygiene standards, and farm-fresh delivery in Andhra Pradesh.">
+  <title>About Us | MilkyWay Farms</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/main.js" defer></script>
+</head>
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <!-- ================= SITE HEADER ================= -->
+  <!-- ================= SITE HEADER ================= -->
+  <header class="site-header">
+    <a href="/" class="brand" aria-label="MilkyWay Farms Homepage">
+      <img src="/images/logo.jpeg" alt="MilkyWay Farms Logo" class="site-logo">
+      <div class="brand-text">
+        <strong>MilkyWay Farms</strong>
+        <small>FRESHNESS, EVERY DAY</small>
+      </div>
+    </a>
+
+    <button class="mobile-nav-toggle" aria-label="Toggle navigation menu">☰</button>
+
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="/" class="">Home</a>
+      <a href="/pages/products.html" class="">Shop Dairy</a>
+      <a href="/pages/subscription.html" class="">Milk Subscription</a>
+      <a href="/pages/about.html" class="active">About Us</a>
+      <a href="/pages/contact.html" class="">Contact Us</a>
+    </nav>
+
+    <!-- Header Action Icons (Profile & Cart) -->
+    <div class="header-actions-wrap">
+      <a id="nav-auth-btn" class="header-profile-btn nav-auth-btn" href="/pages/login.html" title="Customer sign in"><span>Sign in</span></a>
+
+      <a class="header-cart-btn" href="javascript:void(0)" onclick="openCartDrawer()" title="Shopping Cart" aria-label="View Cart" style="position:relative;">
+        <span>🛒</span>
+        <span class="cart-count-badge" style="display:none;position:absolute;top:-4px;right:-4px;font-size:0.7rem;padding:2px 6px;">0</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- ================= MAIN CONTENT ================= -->
+  <main>
+    <section class="section-block">
+      <div class="content-card">
+        <div class="section-heading left-aligned" style="margin-bottom:1.5rem;">
+          <p class="eyebrow">Our Farm &amp; Heritage</p>
+          <h1>Real Dairy, Raised With Love &amp; Care</h1>
+          <p>MilkyWay Farms (Chanumolu Harsha Vardhan) is a dedicated local dairy farm founded with a single mission: to bring wholesome, untouched, and unadulterated dairy straight from our green pastures to your breakfast table.</p>
+        </div>
+
+        <div style="margin:2rem 0;border-radius:var(--radius-lg);overflow:hidden;max-height:380px;">
+          <img src="/images/farm-background.jpeg" alt="MilkyWay Farm Pastures" style="width:100%;height:100%;object-fit:cover;">
+        </div>
+
+        <h2>What Sets Us Apart</h2>
+        <p>In a world of ultra-processed packaged milk and chemical additives, we believe in keeping dairy simple, natural, and transparent. We treat our cattle with respect, ensuring they roam freely and feed on nutrient-rich green fodder.</p>
+
+        <div class="about-features-grid">
+          <div class="about-feat">
+            <span style="font-size:1.8rem;margin-bottom:0.5rem;display:block;">🌱</span>
+            <strong>100% Organic Fodder</strong>
+            <p>Our cattle are fed clean, pesticide-free grass and mineral-enriched grain mixes.</p>
+          </div>
+          <div class="about-feat">
+            <span style="font-size:1.8rem;margin-bottom:0.5rem;display:block;">🔬</span>
+            <strong>Zero Hormones or Oxytocin</strong>
+            <p>We strictly prohibit synthetic hormones, antibiotics, or milk yield enhancers.</p>
+          </div>
+          <div class="about-feat">
+            <span style="font-size:1.8rem;margin-bottom:0.5rem;display:block;">❄️</span>
+            <strong>Immediate 4°C Chilling</strong>
+            <p>Milk is chilled within 45 minutes of milking to stop bacterial growth naturally.</p>
+          </div>
+          <div class="about-feat">
+            <span style="font-size:1.8rem;margin-bottom:0.5rem;display:block;">🍶</span>
+            <strong>Eco-Friendly Glass Bottles</strong>
+            <p>Delivered in sanitised, recyclable glass bottles to prevent plastic micro-contamination.</p>
+          </div>
+        </div>
+
+        <h2 style="margin-top:2.5rem;">Traditional Handcrafted Dairy</h2>
+        <p>Beyond our fresh daily milk, our dairy products are made using timeless artisanal methods:</p>
+        <ul style="padding-left:1.2rem;color:var(--muted);line-height:1.8;">
+          <li><strong>Desi Bilona Ghee:</strong> Prepared by bi-directional churning of whole milk curd, preserving vital A2 beta-casein proteins and golden aroma.</li>
+          <li><strong>Natural Earthen Matka Curd:</strong> Allowed to ferment naturally in porous clay pots for thick, rich, gut-healing probiotic texture.</li>
+          <li><strong>Fresh Malai Paneer:</strong> Crafted by gentle natural lemon/whey curdling for unmatched softness and high protein.</li>
+        </ul>
+
+        <div style="background:var(--mint);padding:1.75rem;border-radius:var(--radius-md);margin-top:2.5rem;border:1px solid #cce4d2;display:flex;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;">
+          <div>
+            <strong style="color:var(--forest);font-size:1.15rem;display:block;">Want to visit our farm?</strong>
+            <span style="color:var(--muted);font-size:0.9rem;">We love welcoming families to see our happy cows and milking process in person!</span>
+          </div>
+          <a href="/pages/contact.html" class="button button-sm">Schedule a Visit</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <a href="/" class="brand">
+          <img src="/images/logo.jpeg" alt="MilkyWay Farms Logo" class="site-logo">
+          <div class="brand-text">
+            <strong>MilkyWay Farms</strong>
+            <small>FRESHNESS, EVERY DAY</small>
+          </div>
+        </a>
+        <p>Chanumolu Harsha Vardhan · Committed to delivering 100% pure, unadulterated farm-fresh dairy straight from healthy pasture-raised cattle to your family table.</p>
+      </div>
+
+      <div class="footer-column">
+        <h4>Products</h4>
+        <ul>
+          <li><a href="/pages/products.html">Farm Fresh Milk</a></li>
+          <li><a href="/pages/products.html">Natural Farm Curd</a></li>
+          <li><a href="/pages/products.html">Pure Desi Cow Ghee</a></li>
+          <li><a href="/pages/products.html">Fresh Malai Paneer</a></li>
+          <li><a href="/pages/products.html">Golden Farm Butter</a></li>
+          <li><a href="/pages/products.html">Sweet Lassi &amp; Khoya</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/pages/subscription.html">Milk Subscription</a></li>
+          <li><a href="/pages/about.html">Our Farm Story</a></li>
+          <li><a href="/pages/contact.html">Contact Us</a></li>
+          <li><a href="/pages/checkout.html">View Cart</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Contact &amp; Support</h4>
+        <ul>
+          <li>📞 <a href="tel:+919603030888">+91 96030 30888</a></li>
+          <li>💬 <a href="https://wa.me/919603030888" target="_blank" rel="noopener noreferrer">WhatsApp Support</a></li>
+          <li>🕒 Mon–Sun: 5:30 AM – 8:00 PM</li>
+          <li>📍 Direct Farm Delivery Network</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 MilkyWay Farms · Chanumolu Harsha Vardhan. All rights reserved.</span>
+      <div style="display:flex;align-items:center;gap:1rem;">
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
